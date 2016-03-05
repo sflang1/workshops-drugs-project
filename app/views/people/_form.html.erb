@@ -1,0 +1,22 @@
+<%= simple_form_for @person do |f| %>
+  <% if @person.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
+      <ul>
+      <% @person.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.input :name, label: "Name", error: "Name is mandatory"%>
+  <%= f.input :lastname, label: "Lastame", error: "Lastname is mandatory"%>
+  <%= f.input :date_of_birth, label: "Date of birth", as: :date, start_year: Date.today.year - 100, end_year: Date.today.year%>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+
+  
+<% end %>

@@ -1,0 +1,15 @@
+%p#notice= notice
+%h1 Dashboard - Ask for stuff
+
+This screen is left blank on purpose for daniela to do anything she wants with it. :3
+
+= simple_form_for :drug_order, url: order_drug_path do |f|
+  %p
+    = f.label :drug
+    %br/
+    = select_tag :drug_id, options_for_select(@available_drugs)
+
+    = f.submit "I am in pain! I need this NOW"
+
+= link_to 'User Root path', user_root_path
+= link_to 'Logout', destroy_user_session_path, method: :delete

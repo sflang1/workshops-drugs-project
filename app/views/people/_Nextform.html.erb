@@ -1,0 +1,24 @@
+<%= form_for :post do |f| %>
+  <p>
+    <%= f.label :"Name Of Medicament" %><br>
+    <%= f.text_field :NameOfMedicament%>
+  </p>
+
+  <p>
+    <%= f.label :"Code of Medicament" %><br>
+    <%= f.text_field :IdMedicament%>
+  </p>
+
+
+
+
+  <p>
+    <%= f.label :"Daily Dose" %><br>
+    <%= f.text_field :DailyDose %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IntroProject</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<% if flash[:notice] %>
+	<div id="notice">
+		<%= flash[:notice] %>
+	</div>
+<% end %>
+<% if flash[:alert] %>
+	<div id="error">
+		<%= flash[:alert] %>
+	</div>
+<% end %>
+
+
+
+
+<div id="contenedor">
+   <header>
+      <h1> ¡My first app!</h1>
+   </header>
+   <nav>
+      <ul>
+         <h1>  Ivett Daniela Jácome Valencia
+        
+      </ul>
+      <div class="clear"></div>
+   </nav> 
+   <section>
+   <%= yield %>
+   </section> 
+</div>
+
+
+
+</body>
+</html>

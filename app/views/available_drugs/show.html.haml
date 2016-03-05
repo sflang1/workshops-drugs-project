@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @available_drug.name
+%p
+  %b Code:
+  = @available_drug.code
+%p
+  %b Units:
+  = @available_drug.units
+
+= link_to 'Edit', edit_available_drug_path(@available_drug)
+\|
+= link_to 'Back', available_drugs_path

@@ -1,0 +1,25 @@
+%h1 Listing available_drugs
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Code
+      %th Units
+      %th
+      %th
+      %th
+
+  %tbody
+    - @available_drugs.each do |available_drug|
+      %tr
+        %td= available_drug.name
+        %td= available_drug.code
+        %td= available_drug.units
+        %td= link_to 'Show', available_drug
+        %td= link_to 'Edit', edit_available_drug_path(available_drug)
+        %td= link_to 'Destroy', available_drug, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Available drug', new_available_drug_path
