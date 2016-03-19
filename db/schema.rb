@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(version: 20160305224551) do
   create_table "available_drugs", force: :cascade do |t|
     t.string   "name"
     t.string   "code"
-    t.string   "units"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "units",      default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "drugs", force: :cascade do |t|

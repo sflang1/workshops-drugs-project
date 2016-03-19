@@ -7,11 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 available_drugs = [
-  {name: "Ibuprofeno", code: "DUG-IBU001"},
-  {name: "Acetaminofén", code: "DUG-ACE001"},
-  {name: "Viagra", code: "DUG-VIA0001"},
-  {name: "Advil", code: "DUG-AD0001"},
-  {name: "Calmidol", code: "DUG-CAL0001"},
+  {name: "Ibuprofeno", code: "DUG-IBU001", units: 100},
+  {name: "Acetaminofén", code: "DUG-ACE001", units: 100},
+  {name: "Viagra", code: "DUG-VIA0001", units: 100},
+  {name: "Advil", code: "DUG-AD0001", units: 100},
+  {name: "Calmidol", code: "DUG-CAL0001", units: 100},
 ]
 
 available_drugs.each do |attributes|

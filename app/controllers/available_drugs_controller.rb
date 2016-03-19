@@ -9,8 +9,9 @@ class AvailableDrugsController < ApplicationController
 
   # Action that responds to a drug request, from a person
   def order_drug
-    @available_drug = AvailableDrug.find(:drug_id)
-    redirect_to request.referer
+    @available_drug = AvailableDrug.find(params[:drug_id])
+    @available_drug.decrement!(:units)
+    redirect_to request.referer, notice: "There are #{@available_drug.units} units left!"
   end
 
   # GET /available_drugs/1

@@ -4,8 +4,7 @@ class WelcomeController < ApplicationController
   end
 
   def dashboard
-    @available_drugs = [["Ibuprofeno", 1], ["Acetaminofén", 2], ["Viagra", 3]]
-
+    @available_drugs = AvailableDrug.all.order(:name).map{|drug| [drug.name, drug.id]}
   end
 
   def check_logged_in

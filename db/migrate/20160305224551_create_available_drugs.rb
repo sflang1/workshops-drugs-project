@@ -3,7 +3,7 @@ class CreateAvailableDrugs < ActiveRecord::Migration
     create_table :available_drugs do |t|
       t.string :name
       t.string :code
-      t.string :units
+      t.integer :units, default: 0
 
       t.timestamps null: false
     end
